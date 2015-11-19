@@ -1,10 +1,10 @@
 CFLAGS += -Werror -Wall
-all: test mypam.so
+all: test pam_http.so
 
 clean:
-	$(RM) test mypam.so *.o
+	$(RM) test pam_http.so *.o
 
-mypam.so: src/mypam.c
+pam_http.so: src/pam_http.c
 	$(CC) $(CFLAGS) -fPIC -shared -Xlinker -x -o $@ $< -lcurl
 
 test: src/test.c

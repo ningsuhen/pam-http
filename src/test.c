@@ -9,7 +9,6 @@
   check_user   account    required     /usr/lib/security/pam_unix_acct.so
  */
 
-#include <security/pam_appl.h>
 #include <security/pam_misc.h>
 #include <stdio.h>
 
